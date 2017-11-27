@@ -1,4 +1,4 @@
-package com.example.wr.clidentframework;
+package com.example.wr.clientframework;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

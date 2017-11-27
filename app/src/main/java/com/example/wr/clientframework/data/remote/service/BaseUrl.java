@@ -1,0 +1,9 @@
+package com.example.wr.clientframework.data.remote.service;
+
+/**
+ * Created by WR on 2017-11-27.
+ */
+
+public class BaseUrl {
+    public static final String BASE_URL = "https://api.korbit.co.kr/";
+}

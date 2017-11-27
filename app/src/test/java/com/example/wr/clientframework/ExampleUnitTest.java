@@ -1,4 +1,4 @@
-package com.example.wr.clidentframework;
+package com.example.wr.clientframework;
 
 import org.junit.Test;
 

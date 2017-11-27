@@ -1,7 +1,9 @@
-package com.example.wr.clidentframework;
+package com.example.wr.clientframework.ui.content.splash;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.wr.clientframework.R;
 
 public class SplashActivity extends AppCompatActivity {
 
