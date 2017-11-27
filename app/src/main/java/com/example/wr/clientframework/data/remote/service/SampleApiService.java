@@ -10,6 +10,10 @@ import retrofit2.http.GET;
  */
 
 public interface SampleApiService {
-    @GET("v1/ticker/detailed")
+
+    @GET("v1/ticker/")
     Call<SampleDTO> getSampleData();
+
+    @GET("v1/ticker/detailed")
+    Call<SampleDTO> getSampleDetailData();
 }
