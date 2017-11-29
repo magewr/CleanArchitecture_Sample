@@ -17,6 +17,7 @@ public class SplashPresenter extends Presenter<SplashContract.View> implements S
     @Override
     public void onCreate() {
         super.onCreate();
-
+        getView().loadSplashImage();
+        getView().moveToMainActivity();
     }
 }

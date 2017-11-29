@@ -11,7 +11,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@AllArgsConstructor(suppressConstructorProperties = true)
+@AllArgsConstructor
 @NoArgsConstructor
 public class SampleDTO {
     private long timestamp;
