@@ -1,5 +1,4 @@
 # ClientFramework
-Splash image 출처 : https://dribbble.com/shots/1433198-Zuck-Dawg-making-it-rain
 
 현재 지속적으로 작업중인 프로젝트입니다.
 
