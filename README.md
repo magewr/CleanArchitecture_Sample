@@ -19,7 +19,7 @@ Presenter패키지와 data패키지 또한 Google Clean Architecture의 가이�
 
 
 
-#Sample UI
+# Sample UI
 
 샘플 API는 http://doc.coinone.co.kr/#api-Public-Ticker 를 사용하였습니다.
 
