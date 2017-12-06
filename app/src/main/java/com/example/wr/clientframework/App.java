@@ -8,6 +8,8 @@ import com.example.wr.clientframework.di.component.DaggerApplicationComponent;
 import com.example.wr.clientframework.di.module.ApiModule;
 import com.example.wr.clientframework.di.module.ApplicationModule;
 
+import lombok.Getter;
+
 /**
  * Created by WR on 2017-11-27.
  */
@@ -15,7 +17,7 @@ import com.example.wr.clientframework.di.module.ApplicationModule;
 public class App extends Application {
 
     private ApplicationComponent applicationComponent;
-    private static Context context;
+    @Getter private static Context context;
 
     @Override
     public void onCreate() {

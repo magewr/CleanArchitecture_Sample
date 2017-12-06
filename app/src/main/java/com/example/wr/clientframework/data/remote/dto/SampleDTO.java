@@ -14,12 +14,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SampleDTO {
-    private long timestamp;
-    private String last;
-    private String bid;
-    private String ask;
-    private String low;
-    private String high;
     private String volume;
-
+    private String last;
+    private String timestamp;
+    private String high;
+    private String low;
+    private String currency;
+    private String result;
+    private String errorCode;
 }

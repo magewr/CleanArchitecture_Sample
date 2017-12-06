@@ -1,11 +1,14 @@
 package com.example.wr.clientframework.ui.content.splash;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.wr.clientframework.R;
 import com.example.wr.clientframework.di.module.ActivityModule;
 import com.example.wr.clientframework.ui.base.BaseActivity;
+import com.example.wr.clientframework.ui.content.main.MainActivity;
 
 import javax.inject.Inject;
 
@@ -37,7 +40,11 @@ public class SplashActivity extends BaseActivity implements SplashContract.View{
 
     @Override
     public void moveToMainActivity() {
-
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }, 5000);
     }
 
     @Override

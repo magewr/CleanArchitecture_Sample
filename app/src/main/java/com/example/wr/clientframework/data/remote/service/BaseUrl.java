@@ -5,5 +5,5 @@ package com.example.wr.clientframework.data.remote.service;
  */
 
 public class BaseUrl {
-    public static final String BASE_URL = "https://api.korbit.co.kr/";
+    public static final String BASE_URL = "https://api.coinone.co.kr/";
 }
