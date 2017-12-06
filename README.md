@@ -17,6 +17,8 @@ Presenter패키지와 data패키지 또한 Google Clean Architecture의 가이�
 그 이후 Kotlin으로 포팅작업 예정입니다.
 
 
+
+
 #Sample UI
 
 샘플 API는 http://doc.coinone.co.kr/#api-Public-Ticker 를 사용하였습니다.
@@ -26,5 +28,7 @@ Presenter패키지와 data패키지 또한 Google Clean Architecture의 가이�
 View의 오픈소스로 Glide, TickerView 사용하였습니다.
 
 Glide : https://github.com/bumptech/glide
+
 TickerView : https://github.com/robinhood/ticker
+
 Splash image 출처 : https://dribbble.com/shots/1433198-Zuck-Dawg-making-it-rain
