@@ -16,5 +16,6 @@ public interface MainContract{
 
     interface Presenter {
         void getSampleData();
+        void dispose();
     }
 }

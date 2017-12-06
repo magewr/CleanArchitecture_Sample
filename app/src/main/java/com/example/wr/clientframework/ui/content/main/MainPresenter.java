@@ -33,6 +33,11 @@ public class MainPresenter extends Presenter<MainContract.View> implements MainC
         getSampleData();
     }
 
+    @Override
+    public void dispose() {
+        useCase.dispose();
+    }
+
     private final class SampleDataObserver extends DisposableObserver<SampleDTO> {
         @Override
         public void onNext(SampleDTO sampleDTO) {

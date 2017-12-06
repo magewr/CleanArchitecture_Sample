@@ -83,4 +83,5 @@ dependencies {
 
     //Ticker
     compile 'com.robinhood.ticker:ticker:1.2.1'
+    implementation 'com.android.support:cardview-v7:27.0.2'
 }

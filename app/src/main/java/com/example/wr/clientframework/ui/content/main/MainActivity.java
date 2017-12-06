@@ -1,5 +1,6 @@
 package com.example.wr.clientframework.ui.content.main;
 
+import android.view.Gravity;
 import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
 
@@ -51,7 +52,6 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         presenter.setView(this);
         tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
         timeTextView.setCharacterList(TickerUtils.getDefaultNumberList());
-//        tickerView.setAnimationInterpolator(new OvershootInterpolator());
         tickerView.setText("0");
     }
 
@@ -59,8 +59,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     public void showSampleData(SampleDTO sampleDTO) {
         int price = Integer.parseInt(sampleDTO.getLast());
         tickerView.setText(String.format("￦ %,10d", price), true);
-        tickerView.setAnimationInterpolator();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
         String date = formatter.format(new Date());
         timeTextView.setText(date);
     }
@@ -68,5 +67,6 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        presenter.dispose();
     }
 }
