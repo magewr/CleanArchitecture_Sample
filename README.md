@@ -1,6 +1,6 @@
 # ClientFramework
 
-현재 지속적으로 작업중인 프로젝트입니다.
+현재 지속적으로 작업중인 프로젝트입니다. (Android Studio 3.0)
 
 
 DI를 이용한 MVP패턴을 사용합니다.
