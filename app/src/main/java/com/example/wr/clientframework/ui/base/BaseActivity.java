@@ -32,7 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         initPresenter();
 
         if (presenter != null)
-            presenter.onCreate();
+            presenter.onCreatePresenter();
     }
 
     @Override
@@ -49,14 +49,14 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     protected void onStart() {
         super.onStart();
         if (presenter != null)
-            presenter.onStart();
+            presenter.onStartPresenter();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         if (presenter != null)
-            presenter.onStop();
+            presenter.onStopPresenter();
     }
 
     protected ApplicationComponent getApplicationComponent() {

@@ -6,7 +6,6 @@ import com.example.wr.clientframework.ui.base.Presenter;
 
 import javax.inject.Inject;
 
-import io.reactivex.Observable;
 import io.reactivex.observers.DisposableObserver;
 
 /**
@@ -28,8 +27,8 @@ public class MainPresenter extends Presenter<MainContract.View> implements MainC
     }
 
     @Override
-    public void onCreate() {
-        super.onCreate();
+    public void onCreatePresenter() {
+        super.onCreatePresenter();
         getSampleData();
     }
 

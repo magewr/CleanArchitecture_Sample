@@ -17,14 +17,14 @@ public abstract class Presenter<T extends BaseView> {
 
     protected AtomicBoolean isViewAlive = new AtomicBoolean();
 
-    public void onCreate() {
+    public void onCreatePresenter() {
     }
 
-    public void onStart() {
+    public void onStartPresenter() {
         isViewAlive.set(true);
     }
 
-    public void onStop() {
+    public void onStopPresenter() {
         isViewAlive.set(false);
     }
 
