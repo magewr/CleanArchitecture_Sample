@@ -1,9 +1,9 @@
 package com.example.wr.clientframework.interactor;
 
-import android.provider.ContactsContract;
-
 import com.example.wr.clientframework.data.DataRepository;
 import com.example.wr.clientframework.data.remote.dto.SampleDTO;
+
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
@@ -25,7 +25,8 @@ public class GetSampleDTOUseCase extends UseCase<SampleDTO, Void> {
 
     @Override
     protected Observable<SampleDTO> buildUseCaseObservable(Void aVoid) {
-        return dataRepository.getSampleDto();
+        return dataRepository.getSampleDto()
+                .repeatWhen(objectObservable -> objectObservable.delay(5, TimeUnit.SECONDS));
     }
 
 }

@@ -1,7 +1,5 @@
 package com.example.wr.clientframework.interactor;
 
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -26,7 +24,6 @@ public abstract class UseCase<T, Param> {
         if (observer != null) {
             final Observable<T> observable = this.buildUseCaseObservable(param)
                     .subscribeOn(Schedulers.io())
-                    .repeatWhen(objectObservable -> objectObservable.delay(5, TimeUnit.SECONDS))
                     .observeOn(AndroidSchedulers.mainThread());
             addDisposable(observable.subscribeWith(observer));
         }
