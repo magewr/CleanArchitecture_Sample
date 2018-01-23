@@ -1,6 +1,7 @@
 현재 지속적으로 작업중인 프로젝트입니다. (Android Studio 3.0)
 
 - DI(Dagger2)를 이용한 MVP, The Clean Architecture를 Base로 함.
+![screensh](https://images.contentful.com/emmiduwd41v7/6HuRyfP1Vm4UEIiIEIeMwS/5f66cdc5c4a5af60f24920548babace1/clean-android-architecture2.jpg)
 
 - Remote Repository - Retrofit2+OkHttp3+Gson 사용
 
@@ -28,3 +29,8 @@ Glide : https://github.com/bumptech/glide
 TickerView : https://github.com/robinhood/ticker
 
 Splash image 출처 : https://dribbble.com/shots/1433198-Zuck-Dawg-making-it-rain
+
+
+# 활용한 앱
+
+https://github.com/magewr/dac_story
