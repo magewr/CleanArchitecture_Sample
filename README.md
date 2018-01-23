@@ -1,19 +1,16 @@
-# ClientFramework
-
 현재 지속적으로 작업중인 프로젝트입니다. (Android Studio 3.0)
 
+- DI(Dagger2)를 이용한 MVP, The Clean Architecture를 Base로 함.
 
-DI를 이용한 MVP패턴을 사용합니다.
+- Remote Repository - Retrofit2+OkHttp3+Gson 사용
 
-http 통신 모듈로 Retrofit2 + OKHttp3를 사용하며 Json Parser로 Gson을 사용합니다.
+- Local Repository - Realm 사용 (Sample UI에는 제외)
 
-RXJava2.0 를 적용하였습니다.
+- RxJava2 사용
 
-Repository와 Model 간의 Interactor에서 Google Clean Architecture의 가이드를 적용해보았습니다.
+- Model+Presentation에서 Mockito 사용한 JUnitTest 코드 작성 (Sample UI에는 제외)
 
-Presenter패키지와 data패키지 또한 Google Clean Architecture의 가이드대로 리팩토링 해볼 예정입니다.
-
-그 이후 Kotlin으로 포팅작업 예정입니다.
+- View에서 Espresso를 이용한 Android Instrumentation Test 코드 작성 (Sample UI에는 제외)
 
 
 
