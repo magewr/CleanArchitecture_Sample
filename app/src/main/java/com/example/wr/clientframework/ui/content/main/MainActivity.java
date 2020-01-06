@@ -1,23 +1,20 @@
 package com.example.wr.clientframework.ui.content.main;
 
-import android.view.Gravity;
-import android.view.animation.OvershootInterpolator;
-import android.widget.TextView;
+
+import androidx.databinding.DataBindingUtil;
 
 import com.example.wr.clientframework.R;
 import com.example.wr.clientframework.data.remote.dto.SampleDTO;
+import com.example.wr.clientframework.databinding.ActivityMainBinding;
 import com.example.wr.clientframework.di.component.ActivityComponent;
 import com.example.wr.clientframework.di.module.ActivityModule;
 import com.example.wr.clientframework.ui.base.BaseActivity;
 import com.robinhood.ticker.TickerUtils;
-import com.robinhood.ticker.TickerView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.inject.Inject;
-
-import butterknife.BindView;
 
 /**
  * Created by WR on 2017-11-27.
@@ -28,16 +25,11 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     @Inject
     MainPresenter presenter;
     private ActivityComponent activityComponent;
-
-    @BindView(R.id.tickerView)
-    TickerView tickerView;
-
-    @BindView(R.id.currentTimeText)
-    TickerView timeTextView;
+    private ActivityMainBinding bnd;
 
     @Override
-    protected int getLayoutId() {
-        return R.layout.activity_main;
+    protected void initDataBinding() {
+        bnd = DataBindingUtil.setContentView(this, R.layout.activity_main);
     }
 
     @Override
@@ -50,18 +42,18 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     protected void initPresenter() {
         super.presenter = presenter;
         presenter.setView(this);
-        tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
-        timeTextView.setCharacterList(TickerUtils.getDefaultNumberList());
-        tickerView.setText("0");
+        bnd.tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
+        bnd.currentTimeText.setCharacterList(TickerUtils.getDefaultNumberList());
+        bnd.tickerView.setText("0");
     }
 
     @Override
     public void showSampleData(SampleDTO sampleDTO) {
-        int price = Integer.parseInt(sampleDTO.getLast());
-        tickerView.setText(String.format("￦ %,10d", price), true);
+        int price = (int)Double.parseDouble(sampleDTO.getLast());
+        bnd.tickerView.setText(String.format("￦ %,10d", price), true);
         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
         String date = formatter.format(new Date());
-        timeTextView.setText(date);
+        bnd.currentTimeText.setText(date);
     }
 
     @Override

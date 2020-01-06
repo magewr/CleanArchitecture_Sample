@@ -1,16 +1,14 @@
 package com.example.wr.clientframework.data.remote;
 
 import android.accounts.NetworkErrorException;
-import android.support.annotation.NonNull;
 
-import com.example.wr.clientframework.App;
+import androidx.annotation.NonNull;
+
 import com.example.wr.clientframework.data.remote.dto.SampleDTO;
 import com.example.wr.clientframework.data.remote.service.BaseUrl;
 import com.example.wr.clientframework.data.remote.service.SampleApiService;
-import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 

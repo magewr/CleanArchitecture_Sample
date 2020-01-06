@@ -1,6 +1,5 @@
 package com.example.wr.clientframework.data.remote;
 
-import lombok.Getter;
 
 /**
  * Created by WR on 2017-12-06.
@@ -15,8 +14,8 @@ public class ServiceError {
     private static final int VALUE_100 = 100;
     public static final int SUCCESS_CODE = 200;
     public static final int ERROR_CODE = 400;
-    @Getter private String description;
-    @Getter private int code;
+    private String description;
+     private int code;
 
     public static boolean isSuccess(int responseCode) {
         return responseCode / VALUE_100 == GROUP_200;
@@ -38,4 +37,19 @@ public class ServiceError {
         this.code = code;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
 }

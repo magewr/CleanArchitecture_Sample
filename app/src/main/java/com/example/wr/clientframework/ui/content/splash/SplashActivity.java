@@ -2,29 +2,29 @@ package com.example.wr.clientframework.ui.content.splash;
 
 import android.content.Intent;
 import android.os.Handler;
-import android.widget.ImageView;
+
+import androidx.databinding.DataBindingUtil;
 
 import com.bumptech.glide.Glide;
 import com.example.wr.clientframework.R;
+import com.example.wr.clientframework.databinding.ActivitySplashBinding;
 import com.example.wr.clientframework.di.module.ActivityModule;
 import com.example.wr.clientframework.ui.base.BaseActivity;
 import com.example.wr.clientframework.ui.content.main.MainActivity;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
 
 public class SplashActivity extends BaseActivity implements SplashContract.View{
 
     @Inject
     SplashPresenter splashPresenter;
 
-    @BindView(R.id.imgView)
-    ImageView splashImageVIew;
+    private ActivitySplashBinding bnd;
 
     @Override
-    protected int getLayoutId() {
-        return R.layout.activity_splash;
+    protected void initDataBinding() {
+        bnd = DataBindingUtil.setContentView(this, R.layout.activity_splash);
     }
 
     @Override
@@ -49,6 +49,6 @@ public class SplashActivity extends BaseActivity implements SplashContract.View{
 
     @Override
     public void loadSplashImage() {
-        Glide.with(this).load(R.raw.mark_and_john).into(splashImageVIew);
+        Glide.with(this).load(R.raw.mark_and_john).into(bnd.imgView);
     }
 }
