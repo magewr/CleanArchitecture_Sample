@@ -1,13 +1,13 @@
 package com.example.wr.clientframework.ui.base;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wr.clientframework.App;
 import com.example.wr.clientframework.di.component.ApplicationComponent;
 
-import butterknife.ButterKnife;
 
 /**
  * Created by WR on 2017-11-27.
@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity implements BaseView{
 
-    protected abstract int getLayoutId();
+    protected abstract void initDataBinding();
     protected abstract void initDagger();
     protected abstract void initPresenter();
 
@@ -24,10 +24,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutId());
-        ButterKnife.setDebug(true);
-        ButterKnife.bind(this);
 
+        initDataBinding();
         initDagger();
         initPresenter();
 

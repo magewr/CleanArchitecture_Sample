@@ -13,7 +13,6 @@ import dagger.Provides;
  * Created by WR on 2017-11-29.
  */
 
-@Singleton
 @Module
 public class ApplicationModule {
     private final App application;
